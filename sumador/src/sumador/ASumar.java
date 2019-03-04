@@ -14,8 +14,7 @@ public class ASumar {
 	}
 	
 	/**
-	 * Método que muestra una cadena de texto vacía si el número introducido
-	 * es negativo.
+	 * Método que suma los digitos de un número y muestra los números sumados y el resultado de la suma
 	 * @author Salvador Galindo Martínez
 	 * @version 1.0
 	 * @return 
@@ -23,7 +22,7 @@ public class ASumar {
 	public String total() {
 		int suma = 0;
 		String fin = "";
-		for(int i = 0; i < valorInicial.length();i++) {
+		for(int i = 0; i < valorInicial.length(); i++) {
 			String digito = valorInicial.substring(i, i+1);
 			suma += Integer.parseInt(digito);
 			if (i < 1) {
