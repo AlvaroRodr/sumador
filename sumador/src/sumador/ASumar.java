@@ -14,18 +14,24 @@ public class ASumar {
 	}
 	
 	/**
-	 * Método que mide la longitud de la variable introducida 
-	 * y muestra el resultado
+	 * Método que muestra una cadena de texto vacía si el número introducido
+	 * es negativo.
 	 * @author Salvador Galindo Martínez
 	 * @version 1.0
-	 * @return devuelve el resultado correcto si cumple la condición y si no, 
-	 * devuelve un mensaje de error
+	 * @return 
 	 */
-	public String mostrar() {
-		String numero = valorInicial;
-		if (numero.length() == 1) {
-			return (numero + " = " + numero);
+	public String total() {
+		int suma = 0;
+		String fin = "";
+		for(int i = 0; i < valorInicial.length();i++) {
+			String digito = valorInicial.substring(i, i+1);
+			suma += Integer.parseInt(digito);
+			if (i < 1) {
+				fin += digito;
+			}else {
+				fin += " + " + digito;
+			}
 		}
-		return ("Número incorrecto");
+		return (fin + " = " + suma);
 	}
 }
